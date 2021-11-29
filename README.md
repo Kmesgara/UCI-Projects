@@ -21,12 +21,15 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
+Load balancing ensures that the application will be highly AVAILABLE, in addition to restricting ACCESS to the network.
 - _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
+denial-of-service (DDoS) attacks by off-loading the data from the organization's server to a cloud server. Jump boxes provide organizations with a clear and straightforward starting server, where they can then securely access other servers.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the EVENT LOGS and system METRICS.
 - _TODO: What does Filebeat watch for?_
+Filebeat watches for log files or locations ultimately for forwarding and centralizing them.
 - _TODO: What does Metricbeat record?_
+Metricbeat records metrics from the operating system and services on the server and sends them to an output.
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
@@ -42,10 +45,10 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+Only the JUMPBOX machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 - _TODO: Add whitelisted IP addresses_
-
-Machines within the network can only be accessed by _____.
+10.0.0.0/254
+Machines within the network can only be accessed by 10.0.0.220.
 - _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
 
 A summary of the access policies in place can be found in the table below.
@@ -54,7 +57,7 @@ A summary of the access policies in place can be found in the table below.
 |---------- |---------------------|----------------------|
 | Jump Box  | Yes                 | 10.0.0.133           |
 | WebServer1| NO                  | 10.0.0.220           |
-| WebServer2| NO                  | 10.0.1.76            |
+| WebServer2| NO                  | 10.0.1.220           |
 | ELK       | NO                  | 10.0.0.220           |
 ### Elk Configuration
 
