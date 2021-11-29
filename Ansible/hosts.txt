@@ -17,11 +17,11 @@
 
 # Ex 2: A collection of hosts belonging to the 'webservers' group
 [elk]
-172.31.37.231 ansible_python_interpreter=/usr/bin/python3
+10.0.0.174 ansible_python_interpreter=/usr/bin/python3
 
 [webservers]
-172.31.42.2
-172.31.22.245
+10.0.0.220
+10.0.1.76
 #alpha.example.org
 #beta.example.org
 #192.168.1.100
